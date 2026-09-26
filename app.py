@@ -2073,7 +2073,7 @@ async def chat(request: ChatRequest):
     if not current_document_id:
         raise HTTPException(
             status_code=400,
-            detail="Upload a PDF or DOCX before asking a question."
+            detail="Upload a PDF before asking a question."
         )
 
     document_level = is_document_level(question)

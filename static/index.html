@@ -1701,7 +1701,7 @@ body.doc-open .scrim{
           </h1>
 
           <p id="welcomeHint">
-            Upload PDF or DOCX to start
+            Upload PDF to start
           </p>
 
           <div
@@ -1742,7 +1742,7 @@ body.doc-open .scrim{
 
         <div class="composer">
 
-          <textarea id="question" rows="1" spellcheck="false" placeholder="Upload a PDF or DOCX to start..."></textarea>
+          <textarea id="question" rows="1" spellcheck="false" placeholder="Upload a PDFto start..."></textarea>
 
           <div class="composer-row">
 
@@ -1752,7 +1752,7 @@ body.doc-open .scrim{
               class="upload-btn"
               id="uploadBtn"
               onclick="focusUpload()"
-              title="Upload PDF or DOCX">
+              title="Upload PDF">
                 ↑ <span id="uploadBtnLabel">Upload Document</span>
               </button>
 
@@ -1808,7 +1808,7 @@ body.doc-open .scrim{
         <ul class="about-list steps">
 
           <li>
-            A PDF or DOCX document is uploaded and its text is
+            A PDF document is uploaded and its text is
             extracted.
           </li>
 
@@ -1909,7 +1909,7 @@ body.doc-open .scrim{
             <div
               class="doc-sub"
               id="status">
-              Upload a PDF or DOCX to begin
+              Upload a PDF to begin
             </div>
 
           </div>
@@ -2414,7 +2414,7 @@ function newConversation(){
   welcomeHint.textContent =
     window.currentDocumentId
       ? 'Your document is ready. Ask a question to get started.'
-      : 'Upload PDF or DOCX to start';
+      : 'Upload PDF to start';
 
   renderHistory();
 
@@ -3096,7 +3096,7 @@ file.onchange = () => {
     )
   ){
     error(
-      'Please select a PDF or DOCX file.'
+      'Please select a PDF file.'
     );
 
     file.value = '';
@@ -3120,7 +3120,7 @@ async function uploadFile(){
 
   if(!file.files[0]){
     return error(
-      'Please choose a PDF or DOCX file.'
+      'Please choose a PDF file.'
     );
   }
 
@@ -3419,10 +3419,10 @@ async function deleteDocument(){
     question.value = '';
 
     question.placeholder =
-      'Upload a PDF or DOCX to start...';
+      'Upload a PDF to start...';
 
     welcomeHint.textContent =
-      'Upload PDF or DOCX to start';
+      'Upload PDF to start';
 
 
     file.value = '';
@@ -3544,11 +3544,11 @@ async function sendMessage(){
 
     add(
       'bot',
-      'Please upload a PDF or DOCX document before asking questions.'
+      'Please upload a PDF document before asking questions.'
     );
 
     error(
-      'Upload a document to start asking questions.'
+      'Upload a PDF to start asking questions.'
     );
 
     question.focus();
